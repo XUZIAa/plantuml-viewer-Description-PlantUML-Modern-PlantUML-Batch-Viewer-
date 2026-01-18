@@ -1,0 +1,66 @@
+@startuml
+title 电商系统用例图
+
+left to right direction
+
+actor 游客 as visitor
+actor 用户 as user
+actor 商家 as seller
+actor 管理员 as admin
+
+rectangle 电商系统 {
+  usecase "浏览商品" as UC1
+  usecase "搜索商品" as UC2
+  usecase "查看商品详情" as UC3
+  usecase "用户注册" as UC4
+  usecase "用户登录" as UC5
+  
+  usecase "加入购物车" as UC6
+  usecase "提交订单" as UC7
+  usecase "在线支付" as UC8
+  usecase "查看订单" as UC9
+  usecase "评价商品" as UC10
+  usecase "申请退款" as UC11
+  
+  usecase "发布商品" as UC12
+  usecase "管理商品" as UC13
+  usecase "处理订单" as UC14
+  usecase "查看销售数据" as UC15
+  
+  usecase "用户管理" as UC16
+  usecase "商家管理" as UC17
+  usecase "系统配置" as UC18
+  usecase "数据统计" as UC19
+}
+
+visitor --> UC1
+visitor --> UC2
+visitor --> UC3
+visitor --> UC4
+visitor --> UC5
+
+user --> UC1
+user --> UC2
+user --> UC3
+user --> UC6
+user --> UC7
+user --> UC8
+user --> UC9
+user --> UC10
+user --> UC11
+
+seller --> UC12
+seller --> UC13
+seller --> UC14
+seller --> UC15
+
+admin --> UC16
+admin --> UC17
+admin --> UC18
+admin --> UC19
+
+UC7 ..> UC6 : <<include>>
+UC7 ..> UC8 : <<include>>
+UC11 ..> UC9 : <<extend>>
+
+@enduml

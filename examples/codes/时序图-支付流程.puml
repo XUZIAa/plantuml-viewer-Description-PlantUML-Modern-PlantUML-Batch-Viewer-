@@ -1,0 +1,73 @@
+@startuml
+title 在线支付时序图
+
+actor 用户
+participant "前端" as frontend
+participant "订单服务" as order
+participant "支付服务" as payment
+participant "第三方支付" as thirdparty
+database "数据库" as db
+
+用户 -> frontend: 点击支付按钮
+activate frontend
+
+frontend -> order: 创建支付订单
+activate order
+
+order -> db: 保存订单信息
+activate db
+db --> order: 返回订单ID
+deactivate db
+
+order --> frontend: 返回订单信息
+deactivate order
+
+frontend -> payment: 发起支付请求
+activate payment
+
+payment -> db: 创建支付记录
+activate db
+db --> payment: 返回支付ID
+deactivate db
+
+payment -> thirdparty: 调用支付接口
+activate thirdparty
+
+thirdparty --> payment: 返回支付页面URL
+deactivate thirdparty
+
+payment --> frontend: 返回支付URL
+deactivate payment
+
+frontend -> 用户: 跳转到支付页面
+deactivate frontend
+
+用户 -> thirdparty: 完成支付
+activate thirdparty
+
+thirdparty -> payment: 支付回调通知
+activate payment
+
+payment -> db: 更新支付状态
+activate db
+db --> payment: 更新成功
+deactivate db
+
+payment -> order: 通知订单支付成功
+activate order
+
+order -> db: 更新订单状态
+activate db
+db --> order: 更新成功
+deactivate db
+
+order --> payment: 确认收到
+deactivate order
+
+payment --> thirdparty: 返回成功
+deactivate payment
+
+thirdparty --> 用户: 显示支付成功
+deactivate thirdparty
+
+@enduml

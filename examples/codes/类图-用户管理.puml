@@ -1,0 +1,75 @@
+@startuml
+title 用户管理系统类图
+
+class User {
+  - id: Long
+  - username: String
+  - password: String
+  - email: String
+  - phone: String
+  - status: UserStatus
+  - createTime: Date
+  - updateTime: Date
+  --
+  + login(): boolean
+  + logout(): void
+  + updateProfile(): void
+  + changePassword(): void
+}
+
+class Role {
+  - id: Long
+  - name: String
+  - description: String
+  - permissions: List<Permission>
+  --
+  + addPermission(): void
+  + removePermission(): void
+}
+
+class Permission {
+  - id: Long
+  - code: String
+  - name: String
+  - resource: String
+  - action: String
+  --
+  + checkAccess(): boolean
+}
+
+class UserService {
+  - userRepository: UserRepository
+  - roleRepository: RoleRepository
+  --
+  + register(user: User): User
+  + login(username, password): Token
+  + getUserById(id: Long): User
+  + updateUser(user: User): void
+  + deleteUser(id: Long): void
+  + assignRole(userId, roleId): void
+}
+
+class UserRepository {
+  --
+  + save(user: User): User
+  + findById(id: Long): User
+  + findByUsername(username): User
+  + delete(id: Long): void
+  + findAll(): List<User>
+}
+
+enum UserStatus {
+  ACTIVE
+  INACTIVE
+  LOCKED
+  DELETED
+}
+
+User "1" -- "n" Role : has >
+Role "1" -- "n" Permission : contains >
+User -- UserStatus
+UserService --> User
+UserService --> UserRepository
+UserRepository --> User
+
+@enduml

@@ -1,0 +1,77 @@
+@startuml
+!define RECTANGLE class
+
+title 微服务系统架构图
+
+package "前端层" {
+  [Web 前端] as web
+  [移动端 App] as mobile
+  [管理后台] as admin
+}
+
+package "网关层" {
+  [API 网关] as gateway
+  [负载均衡] as lb
+}
+
+package "服务层" {
+  [用户服务] as user
+  [订单服务] as order
+  [商品服务] as product
+  [支付服务] as payment
+  [物流服务] as logistics
+}
+
+package "数据层" {
+  database "用户数据库" as userdb
+  database "订单数据库" as orderdb
+  database "商品数据库" as productdb
+  database "Redis 缓存" as redis
+}
+
+package "基础设施" {
+  [消息队列 RabbitMQ] as mq
+  [配置中心] as config
+  [服务注册中心] as registry
+  [日志中心] as log
+}
+
+' 连接关系
+web --> gateway
+mobile --> gateway
+admin --> gateway
+
+gateway --> lb
+lb --> user
+lb --> order
+lb --> product
+lb --> payment
+lb --> logistics
+
+user --> userdb
+order --> orderdb
+product --> productdb
+
+user --> redis
+order --> redis
+product --> redis
+
+order --> mq
+payment --> mq
+logistics --> mq
+
+user --> registry
+order --> registry
+product --> registry
+payment --> registry
+logistics --> registry
+
+user --> config
+order --> config
+product --> config
+
+user --> log
+order --> log
+product --> log
+
+@enduml

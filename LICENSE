@@ -1,0 +1,50 @@
+MIT License
+
+Copyright (c) 2026 许
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+## 附加声明 | Additional Terms
+
+### 免责声明 | Disclaimer
+
+1. 本软件仅供学习和个人使用
+2. 使用本软件产生的任何后果由使用者自行承担
+3. 作者不对软件的功能性、安全性、稳定性做任何保证
+4. 严禁将本软件用于任何违法用途
+
+### 第三方库声明 | Third-Party Libraries
+
+本软件使用了以下开源库，它们各自遵循自己的许可证：
+
+- CustomTkinter (MIT License)
+- Pillow (HPND License)
+- Requests (Apache License 2.0)
+- PyInstaller (GPL License with exception)
+
+### PlantUML 声明 | PlantUML Notice
+
+本软件使用 PlantUML 服务生成图表。PlantUML 是独立的开源项目，
+本软件仅作为客户端工具，不是 PlantUML 官方工具。
+
+This software uses PlantUML service to generate diagrams. PlantUML is 
+an independent open source project. This software is only a client tool 
+and is not an official PlantUML tool.
