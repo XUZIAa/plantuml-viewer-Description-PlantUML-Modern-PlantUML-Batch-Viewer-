@@ -24,7 +24,7 @@ A Modern Batch Viewer and Manager for PlantUML Diagrams
 <p><strong>你好，我是一名在读大学生。</strong></p>
 <p>在日常的学习和开发中，我用 PlantUML 来绘制流程图和架构图。我发现传统的生成方式效率很低：需要一步步复制粘贴代码，生成图片后再手动保存，而且随着文件增多，很难进行分类和项目化管理。</p>
 <p>为了解决这个痛点，提升生产力，我利用课余时间构造了这个项目。</p>
-<p>由于本人还是学生，水平有限，软件中可能存在不足之处，希望大家多多包涵。如果这个项目真的帮助到了你，并且有更多人需要，我将在后续版本中继续优化，计划加入<strong>本地部署模式</strong>（无需联网即可使用）。</p>
+<p>由于本人还是学生，水平有限，软件中可能存在不足之处，希望大家多多包涵。如果这个项目真的帮助到了你，并且有更多人需要，我将在后续版本中继续优化，计划加入<strong>本地部署模式</strong>（无需联网即可使用）以及加入画图功能等。</p>
 </blockquote>
 <br>
 <h2 id="核心特性"> 核心特性</h2>
@@ -100,4 +100,25 @@ If you like this project, please give it a Star.</p>
 作者：许 | 联系邮箱：pursue_everything@163.com
 </p>
 <br>
+</div>
+<hr>
+
+<hr>
+
+<hr>
+
+<div align="center">
+
+<h3>🥤 请作者喝杯奶茶</h3>
+
+<p>
+    如果你觉得这个项目对你有帮助，可以请作者喝杯饮料表示鼓励 🍹<br>
+    <span style="font-size: 12px; color: gray;">(赞赏完全自愿，代码开源且免费)</span>
+</p>
+
+<img src="./nothing/noting.jpg" width="180" alt="微信赞赏码" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+
+<br><br>
+
+
 </div>
