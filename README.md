@@ -7,10 +7,10 @@
     </p>
 
     <p>
-        <img src="https://img.shields.io/badge/Version-1.0.0-007ACC?style=for-the-badge&logo=appveyor" alt="Version">
-        <img src="https://img.shields.io/badge/Platform-Windows-4EAA25?style=for-the-badge&logo=windows" alt="Platform">
-        <img src="https://img.shields.io/badge/License-MIT-critical?style=for-the-badge" alt="License">
-        <img src="https://img.shields.io/badge/Python-3.7+-yellow?style=for-the-badge&logo=python" alt="Python">
+        <img src="[https://img.shields.io/badge/Version-1.0.0-007ACC?style=for-the-badge&logo=appveyor](https://img.shields.io/badge/Version-1.0.0-007ACC?style=for-the-badge&logo=appveyor)" alt="Version">
+        <img src="[https://img.shields.io/badge/Platform-Windows-4EAA25?style=for-the-badge&logo=windows](https://img.shields.io/badge/Platform-Windows-4EAA25?style=for-the-badge&logo=windows)" alt="Platform">
+        <img src="[https://img.shields.io/badge/License-MIT-critical?style=for-the-badge](https://img.shields.io/badge/License-MIT-critical?style=for-the-badge)" alt="License">
+        <img src="[https://img.shields.io/badge/Python-3.7+-yellow?style=for-the-badge&logo=python](https://img.shields.io/badge/Python-3.7+-yellow?style=for-the-badge&logo=python)" alt="Python">
     </p>
 
     <br>
